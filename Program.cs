@@ -4,7 +4,7 @@ using MathCalculatorAPI.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddTransient<ICalculatorService<int>, CalculatorService>();
+builder.Services.AddTransient<ICalculatorService, CalculatorService>(); 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
