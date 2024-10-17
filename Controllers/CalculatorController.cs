@@ -15,6 +15,7 @@ namespace MathCalculatorAPI.Controllers
         }
 
         [HttpPost("add")]
+        [ValidateAntiForgeryToken]
         public IActionResult Add([FromBody] CalculatorRequest request)
         {
             var result = _calculatorService.Add(request.a, request.b);
@@ -22,6 +23,7 @@ namespace MathCalculatorAPI.Controllers
         }
 
         [HttpPost("subtract")]
+        [ValidateAntiForgeryToken]
         public IActionResult Subtract([FromBody] CalculatorRequest request)
         {
             var result = _calculatorService.Subtract(request.a, request.b);
@@ -29,6 +31,7 @@ namespace MathCalculatorAPI.Controllers
         }
 
         [HttpPost("multiply")]
+        [ValidateAntiForgeryToken]
         public IActionResult Multiply([FromBody] CalculatorRequest request)
         {
             var result = _calculatorService.Multiply(request.a, request.b);
@@ -36,6 +39,7 @@ namespace MathCalculatorAPI.Controllers
         }
 
         [HttpPost("divide")]
+        [ValidateAntiForgeryToken]
         public IActionResult Divide([FromBody] CalculatorRequest request)
         {
             var result = _calculatorService.Divide(request.a, request.b);
